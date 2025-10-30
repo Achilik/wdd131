@@ -1,0 +1,69 @@
+/* Reset basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes managing widths/paddings easier */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white; /* Default text color */
+}
+
+/* --- Header Section --- */
+.header {
+    background-color: #333; /* Dark gray */
+    padding: 20px;
+}
+.header h1 {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+/* --- Navigation Section (Black Bar) --- */
+.nav {
+    background-color: #000; /* Black */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+.nav ul {
+    list-style: none;
+    display: flex; /* Flexbox for horizontal list items */
+    justify-content: space-around; /* Distribute space evenly */
+}
+.nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+/* --- Main Content and Aside Container --- */
+.main-content-area {
+    display: flex; /* Enables side-by-side layout */
+    min-height: 400px; /* Ensures visible area even without much content */
+    color: black; /* Text color for this light-gray area */
+}
+
+/* --- Main Content (Left, Larger Section) --- */
+.main {
+    flex: 3; /* Takes up 3 parts of the available space */
+    background-color: #ccc; /* Light gray */
+    padding: 20px;
+}
+
+/* --- Aside Content (Right, Smaller Section) --- */
+.aside {
+    flex: 1; /* Takes up 1 part of the available space (making it 1/4 of the width) */
+    background-color: #eee; /* Slightly lighter gray for contrast */
+    padding: 20px;
+    border-left: 1px solid #aaa; /* Optional: adds a slight visual separation line */
+}
+
+/* --- Footer Section --- */
+.footer {
+    background-color: #333; /* Dark gray */
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
