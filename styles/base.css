@@ -1,0 +1,149 @@
+/* Google Fonts */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background-color: #0a4a75;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.highlight {
+  color: #b5fcd0;
+}
+
+/* NAVIGATION */
+nav {
+  background-color: #2e2d2d;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.75rem;
+}
+
+nav a {
+  color: #dcdcdc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, background 0.3s;
+}
+
+nav a:hover {
+  color: #ffd500;
+  background-color: #1c1c1c;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+}
+
+/* MAIN LAYOUT */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0a4a75;
+}
+
+/* CARDS */
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.about img {
+  width: 130px;
+  border-radius: 10px;
+}
+
+.location {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.location img {
+  width: 100px;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+.location p:first-of-type {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* LINKS */
+.card ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.card a {
+  color: #0a4a75;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  background-color: #0a4a75;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+#lastModified {
+  color: #b5fcd0;
+  margin-top: 0.5rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .location {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
