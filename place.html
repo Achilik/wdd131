@@ -1,54 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nigeria - Country Profile</title>
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/large.css" media="(min-width: 600px)">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Temple Album</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Achilike. Home page with course details and personal info."/>
+  <meta name="author" content="Achilike"/>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/large.css">
     <script src="scripts/place.js" defer></script>
 </head>
 <body>
-     <header>
-    <h1>Nigeria</h1>
-  </header>
+    <header>
+        <h1>Nigeria</h1>
+    </header>
 
     <main>
-        <div class="hero">
+        <section id="hero">
             <picture>
-                <source srcset="images/abuja.webp" media="(min-width: 600px)">
-                <img src="images/abuja.webp" alt="A busy street scene in Lagos, Nigeria" loading="lazy">
+                <source media="(min-width: 600px)" srcset="images/abuja.webp">
+                <img src="images/abuja.webp" alt="A busy street scene in Lagos, Nigeria">
             </picture>
-        </div>
-
-        <section class="data-card">
-            <h2 class="data-heading">Data</h2>
-            <ul>
-                <li><strong>Area:</strong> 923,768 sq km</li>
-                <li><strong>Population:</strong> 230,842,743 (estimated)</li>
-                <li><strong>Capital:</strong> Abuja</li>
-                <li><strong>Languages:</strong> English (Official), Hausa, Igbo, Yoruba</li>
-                <li><strong>Currency:</strong> Nigerian Naira (₦)</li>
-                <li><strong>Time Zone:</strong> UTC+1</li>
-                <li><strong>Calling Code:</strong> +234</li>
-                <li><strong>Internet TLD:</strong> .ng</li>
-            </ul>
         </section>
 
-        <section class="weather-card">
-            <h2>Weather <span class="weather-icon-large"></span></h2>
-            <div class="weather-mobile-icon"></div>
-            <p><strong>Temperature:</strong> <span id="temp">28</span> °C</p>
-            <p><strong>Conditions:</strong> Sunny intervals</p>
-            <p><strong>Wind:</strong> <span id="wind">12</span> km/h</p>
-            <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+        <section id="data-section">
+            <div class="data-box">
+                <h2>Data</h2>
+                <dl>
+                    <dt>Area:</dt>
+                    <dd>923,768 sq km</dd>
+                    <dt>Population:</dt>
+                    <dd>230,842,743 (estimated)</dd>
+                    <dt>Capital:</dt>
+                    <dd>Abuja</dd>
+                    <dt>Languages:</dt>
+                    <dd>English (Official), Hausa, Igbo, Yoruba</dd>
+                    <dt>Currency:</dt>
+                    <dd>Nigerian Naira (₦)</dd>
+                    <dt>Time Zone:</dt>
+                    <dd>UTC+1</dd>
+                    <dt>Calling Code:</dt>
+                    <dd>+234</dd>
+                    <dt>Internet TLD:</dt>
+                    <dd>.ng</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section id="weather-section">
+            <div class="weather-box">
+                <h2>Weather <span class="weather-icon-desktop">☀️</span></h2>
+                
+                <div class="weather-icon-mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="60" height="60">
+                        <circle cx="32" cy="32" r="12" fill="#FFC72C"/>
+                        <path d="M48 38c3.9 0 7-3.1 7-7s-3.1-7-7-7c-0.8 0-1.5 0.1-2.2 0.3c-1.8-4.2-6-7.3-11.8-7.3c-6.8 0-12.4 5-13.7 11.6c-4.4 0.6-7.9 4.3-7.9 8.8c0 4.9 4 8.8 8.8 8.8h28c3.3 0 6-2.7 6-6s-2.7-6-6-6h-28z" fill="#D3D3D3"/>
+                    </svg>
+                </div>
+                
+                <dl>
+                    <dt>Temperature:</dt>
+                    <dd><span id="temperature">28</span> °C</dd>
+                    <dt>Conditions:</dt>
+                    <dd>Partly Cloudy</dd>
+                    <dt>Wind:</dt>
+                    <dd><span id="wind-speed">5</span> km/h</dd>
+                    <dt>Wind Chill:</dt>
+                    <dd><span id="wind-chill-value">N/A</span> °C</dd>
+                </dl>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy;<span id="currentyear"></span> | Nigeria Country Profile</p>
-        <p>Last Modification: <span id="lastmodified"></span></p>
-        <p>By Achilike Samuel Nwaokonko</p>
+        <p>© <span id="currentyear"></span> Achilike Samuel Nwaokonko</p>
+        <p>Last Modified: <span id="lastmodified"></span></p>
     </footer>
+
 </body>
 </html>

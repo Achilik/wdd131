@@ -1,79 +1,203 @@
+/* --- Global CSS Variables --- */
 :root {
-    /* Global CSS Variables (required) */
-    --primary-color: #008753; /* Green from Nigerian flag */
-    --secondary-color: #ffffff; /* White from Nigerian flag */
-    --accent-color: #ff9900; /* A complimentary accent color */
-    --heading-font: 'Helvetica Neue', sans-serif;
-    --body-font: 'Arial', sans-serif;
+    --primary-color: #008753; /* Nigerian Flag Green */
+    --secondary-color: #FFFFFF; /* White */
+    --accent-color: #FFC72C; /* Gold/Yellow for accents */
+    --text-color: #333;
+    --font-family: 'Arial', sans-serif;
+    --box-padding: 15px;
+    --box-border-radius: 8px;
 }
 
-/* Basic Resets and Body Styling */
-body {
-    font-family: var(--body-font);
+/* --- General Styling --- */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light background */
-    color: #333;
 }
 
-header {
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    padding: 1rem;
-    text-align: center;
 }
 
-h1,h2 {
-    font-family: var(--heading-font);
-    --secondary-color: #ffffff;
+h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
 }
 
-/* Media Query for wider screens (min-width: 600px) */
-main {
-    /* Change layout to the wider-view grid */
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* Two columns: 2/3 for hero, 1/3 for cards */
-    grid-template-rows: auto auto; /* Two rows */
-    grid-template-areas:
-        "hero data"
-        "hero weather";
-    gap: 20px;
-    max-width: 1200px; /* Optional: Limit width on massive screens */
-    margin: 1rem auto;
+/* --- Hero Section (Responsive Image) --- */
+#hero {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-.hero {
-    grid-area: hero;
-    overflow: hidden; /* Ensures image stays within its area */
-}
-
-.hero img {
-    height: 100%; /* Make image fill the height of its container */
+#hero img {
+    display: block;
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
-.data-card {
-    grid-area: data;
+/* Mobile View: Portrait image is assumed to be taller and covers the full width. */
+#hero img {
+    height: 400px;
 }
 
-.weather-card {
-    grid-area: weather;
+/* --- Data and Weather Boxes --- */
+.data-box, .weather-box {
+    background-color: var(--secondary-color);
+    padding: var(--box-padding);
+    margin: 20px;
+    border-radius: var(--box-border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Hide mobile-view weather icon in large view */
-.weather-mobile-icon {
+/* Styling for the Data Box Header (Green background strip) */
+.data-box h2 {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    padding: 8px var(--box-padding);
+    margin: calc(-1 * var(--box-padding)) calc(-1 * var(--box-padding)) 10px calc(-1 * var(--box-padding));
+    border-top-left-radius: var(--box-border-radius);
+    border-top-right-radius: var(--box-border-radius);
+}
+
+/* Styling for the Weather Box Header (Accent color strip for visual interest) */
+.weather-box h2 {
+    color: var(--text-color);
+    background-color: var(--accent-color);
+    padding: 8px var(--box-padding);
+    margin: calc(-1 * var(--box-padding)) calc(-1 * var(--box-padding)) 10px calc(-1 * var(--box-padding));
+    border-top-left-radius: var(--box-border-radius);
+    border-top-right-radius: var(--box-border-radius);
+}
+
+/* Definition List Styling */
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px 10px;
+}
+
+dt {
+    font-weight: bold;
+    text-align: right;
+}
+
+dd {
+    margin-left: 0;
+}
+
+/* Weather Icon Styling */
+.weather-icon-desktop {
+    /* Hiding the desktop emoticon in mobile view */
     display: none;
 }
 
-/* Weather Icon (Pseudo-element requirement) */
-.weather-icon-large {
-    display: inline-block;
+.weather-icon-mobile {
+    /* Container for the SVG icon in mobile view */
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    /* Center the SVG within its container */
 }
 
-/* Pseudo element for weather icon after the heading 'Weather' (required) */
-.weather-card h2 .weather-icon-large::after {
-    content: " ⛅"; /* Emoticon/equivalent for weather icon (required) */
-    color: var(--accent-color);
-    font-size: 1.2em;
-    padding-left: 0.5rem;
+.weather-icon-mobile svg {
+    display: inline-block;
+    vertical-align: middle;
+    /* Optional: Set max size for consistency */
+    max-width: 80px;
+    max-height: 80px;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ------------------------------------- */
+/* --- Media Query for Wider Views (e.g., Tablet and Desktop) --- */
+/* ------------------------------------- */
+@media (min-width: 600px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas:
+            "hero hero"
+            "data weather";
+        grid-template-columns: 1fr 350px; /* Data wider than weather */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    #hero {
+        grid-area: hero;
+        /* Desktop view: Landscape image is wider and shorter */
+        height: 450px;
+        overflow: hidden; /* Ensures image doesn't stretch past container height */
+        margin-bottom: 0;
+    }
+
+    #data-section {
+        grid-area: data;
+        margin: 0;
+    }
+
+    #weather-section {
+        grid-area: weather;
+        margin: 0;
+    }
+    
+    /* Responsive Box Styling */
+    .data-box, .weather-box {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Weather Icon Visibility */
+    .weather-icon-mobile {
+        /* Hiding the mobile SVG icon in wider view */
+        display: none;
+    }
+
+    /* Required Pseudo-Element for Wider View */
+    .weather-box h2::after {
+        content: '\26C5'; /* A Cloud/Sun Emoticon */
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 1.2em;
+    }
+
+    /* Use the span for the required weather icon */
+    .weather-icon-desktop {
+        display: inline;
+        margin-left: 10px;
+    }
+
+    /* Adjust the data box header to ensure h2 and contents align well */
+    .data-box h2 {
+        flex-shrink: 0; /* Prevents header from shrinking */
+    }
 }
