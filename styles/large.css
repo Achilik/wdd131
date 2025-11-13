@@ -1,0 +1,79 @@
+:root {
+    /* Global CSS Variables (required) */
+    --primary-color: #008753; /* Green from Nigerian flag */
+    --secondary-color: #ffffff; /* White from Nigerian flag */
+    --accent-color: #ff9900; /* A complimentary accent color */
+    --heading-font: 'Helvetica Neue', sans-serif;
+    --body-font: 'Arial', sans-serif;
+}
+
+/* Basic Resets and Body Styling */
+body {
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background */
+    color: #333;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+h1,h2 {
+    font-family: var(--heading-font);
+    --secondary-color: #ffffff;
+}
+
+/* Media Query for wider screens (min-width: 600px) */
+main {
+    /* Change layout to the wider-view grid */
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Two columns: 2/3 for hero, 1/3 for cards */
+    grid-template-rows: auto auto; /* Two rows */
+    grid-template-areas:
+        "hero data"
+        "hero weather";
+    gap: 20px;
+    max-width: 1200px; /* Optional: Limit width on massive screens */
+    margin: 1rem auto;
+}
+
+.hero {
+    grid-area: hero;
+    overflow: hidden; /* Ensures image stays within its area */
+}
+
+.hero img {
+    height: 100%; /* Make image fill the height of its container */
+    object-fit: cover;
+}
+
+.data-card {
+    grid-area: data;
+}
+
+.weather-card {
+    grid-area: weather;
+}
+
+/* Hide mobile-view weather icon in large view */
+.weather-mobile-icon {
+    display: none;
+}
+
+/* Weather Icon (Pseudo-element requirement) */
+.weather-icon-large {
+    display: inline-block;
+}
+
+/* Pseudo element for weather icon after the heading 'Weather' (required) */
+.weather-card h2 .weather-icon-large::after {
+    content: " ⛅"; /* Emoticon/equivalent for weather icon (required) */
+    color: var(--accent-color);
+    font-size: 1.2em;
+    padding-left: 0.5rem;
+}

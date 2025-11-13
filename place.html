@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigeria - Country Profile</title>
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 600px)">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+     <header>
+    <h1>Nigeria</h1>
+  </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/abuja.webp" media="(min-width: 600px)">
+                <img src="images/abuja.webp" alt="A busy street scene in Lagos, Nigeria" loading="lazy">
+            </picture>
+        </div>
+
+        <section class="data-card">
+            <h2 class="data-heading">Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 923,768 sq km</li>
+                <li><strong>Population:</strong> 230,842,743 (estimated)</li>
+                <li><strong>Capital:</strong> Abuja</li>
+                <li><strong>Languages:</strong> English (Official), Hausa, Igbo, Yoruba</li>
+                <li><strong>Currency:</strong> Nigerian Naira (₦)</li>
+                <li><strong>Time Zone:</strong> UTC+1</li>
+                <li><strong>Calling Code:</strong> +234</li>
+                <li><strong>Internet TLD:</strong> .ng</li>
+            </ul>
+        </section>
+
+        <section class="weather-card">
+            <h2>Weather <span class="weather-icon-large"></span></h2>
+            <div class="weather-mobile-icon"></div>
+            <p><strong>Temperature:</strong> <span id="temp">28</span> °C</p>
+            <p><strong>Conditions:</strong> Sunny intervals</p>
+            <p><strong>Wind:</strong> <span id="wind">12</span> km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Nigeria Country Profile</p>
+        <p>Last Modification: <span id="lastmodified"></span></p>
+        <p>By Achilike Samuel Nwaokonko</p>
+    </footer>
+</body>
+</html>

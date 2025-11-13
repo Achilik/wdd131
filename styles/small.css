@@ -1,0 +1,92 @@
+:root {
+    /* Global CSS Variables (required) */
+    --primary-color: #008753; /* Green from Nigerian flag */
+    --secondary-color: #ffffff; /* White from Nigerian flag */
+    --accent-color: #ff9900; /* A complimentary accent color */
+    --heading-font: 'Helvetica Neue', sans-serif;
+    --body-font: 'Arial', sans-serif;
+}
+
+/* Basic Resets and Body Styling */
+body {
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background */
+    color: #333;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+h1,h2{
+    font-family: var(--heading-font);
+    --secondary-color: #ffffff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* Hero Section */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Data and Weather Cards */
+.data-card, .weather-card {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.data-card ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
+}
+
+.data-heading {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    margin: -1.5rem -1.5rem 1rem -1.5rem; /* Pushes background to card edges */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 50%; /* Make heading distinct */
+}
+
+/* Weather Icon (SVG for mobile view requirement) */
+.weather-mobile-icon {
+    float: right;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--accent-color);
+}
+
+/* Hide large-view weather icon in mobile */
+.weather-icon-large {
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
