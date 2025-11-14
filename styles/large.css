@@ -48,10 +48,6 @@ h2 {
     object-fit: cover;
 }
 
-/* Mobile View: Portrait image is assumed to be taller and covers the full width. */
-#hero img {
-    height: 400px;
-}
 
 /* --- Data and Weather Boxes --- */
 .data-box, .weather-box {
