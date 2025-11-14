@@ -19,7 +19,6 @@
 body {
     font-family: var(--font-family);
     line-height: 1.6;
-    color: var(--text-color);
     background-color: #f4f4f4; /* Light grey background */
 }
 
