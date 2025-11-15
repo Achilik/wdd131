@@ -20,14 +20,31 @@
     <header>
         <h1>Nigeria</h1>
     </header>
+<main>
+    
+<section id="hero">
+ <picture>
+    <source 
+      type="image/webp"
+      srcset="
+      images/abuja.webp 600w, 
+      images/abuja.webp 1200w
+      "
+    sizes="(max-width: 599px) 100vw, 600px"
+  >
 
-    <main>
-        <section id="hero">
-            <picture>
-                <source media="(min-width: 600px)" srcset="images/abuja.webp">
-                <img src="images/abuja.webp" alt="A busy street scene in Lagos, Nigeria">
-            </picture>
-        </section>
+  <img 
+    src="images/abuja.webp" 
+    srcset="
+      images/abuja.webp 600w, 
+      images/abuja.webp 1200w
+    "
+    sizes="(max-width: 599px) 100vw, 600px"
+    alt="A descriptive alt text for the image."
+    loading="lazy"
+  >
+ </picture>
+</section>
 
         <section id="data-section">
             <div class="data-box">
