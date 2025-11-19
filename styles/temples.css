@@ -152,3 +152,24 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+/* Media Query for smaller screens (mobile) */
+@media (max-width: 600px) {
+  header {
+    text-align: center;
+  }
+
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header button {
+    flex: 1 1 45%;
+    margin: 5px;
+  }
+
+  .temple-cards {
+    grid-template-columns: 1fr; /* One card per row on mobile */
+  }
+}
