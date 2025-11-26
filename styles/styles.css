@@ -91,3 +91,34 @@ footer {
     color: white;
     margin-top: 2rem;
 }
+
+/* ================================
+   Desktop Layout (min-width: 768px)
+   ================================ */
+@media (min-width: 768px) {
+    main {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    form {
+        padding: 2rem 3rem;
+        border-radius: 12px;
+    }
+
+    fieldset {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .features-field {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rating-field label {
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+}
