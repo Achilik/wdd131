@@ -58,14 +58,30 @@
         <input type="date" id="install" name="install" required>
 
         <!-- Useful Features -->
-        <fieldset class="features-group">
-            <legend>Which features did you find useful? (Check all that apply)</legend>
+        <fieldset class="features-field">
+    <legend>Useful Features (Check all that apply)</legend>
 
-            <label><input type="checkbox" name="features" value="Durability"> Durability</label>
-            <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
-            <label><input type="checkbox" name="features" value="Performance"> Performance</label>
-            <label><input type="checkbox" name="features" value="Design"> Design</label>
-        </fieldset>
+    <div>
+        <input type="checkbox" id="feature1" name="features" value="Durability">
+        <label for="feature1">Durability</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="feature2" name="features" value="Ease of Use">
+        <label for="feature2">Ease of Use</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="feature3" name="features" value="Performance">
+        <label for="feature3">Performance</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="feature4" name="features" value="Design">
+        <label for="feature4">Design</label>
+    </div>
+</fieldset>
+
 
         <!-- Written Review -->
         <label for="review">Written Review (Optional)</label>
