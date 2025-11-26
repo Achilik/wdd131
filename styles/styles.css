@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+header {
+    background: #2e042f;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+.review-form {
+    background: #fff;
+    padding: 1.2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+label, legend {
+    font-weight: bold;
+    margin-top: 1rem;
+    display: block;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+fieldset {
+    border: none;
+    margin-top: 1rem;
+}
+
+.rating-group label,
+.features-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.submit-btn {
+    background: #2e042f;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 6px;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #4b0651;
+}
+
+.confirm-box {
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    background: #2e042f;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #2e042f;
+    color: white;
+    margin-top: 2rem;
+}
